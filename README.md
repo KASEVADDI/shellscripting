@@ -119,3 +119,46 @@ add() {
     sum=$((a+b))
     echo "$a and $b equl to : $sum"
 }
+----------------
+#!/bin/bash
+
+echo hello world!
+
+NAME="Muthyal"
+echo "my name is ${NAME}"
+
+read -p "Enter your name: " NAME
+echo "my name is $NAME, nice to meet you!"
+-------------------------------------------
+NUM1=31
+NUM2=5
+if [: "$NUM1" -gt "$NU2" :]
+then
+echo "$NUM1 is greater than $NUM2"
+else
+echo "$NUM1 is less than $NUM2"
+fi
+-------------------------------
+FILE="text.txt"
+if [ -e "$FILE" ]
+then
+echo "$FILE is exit"
+else
+echo "$FILE does not exit"
+fi
+----------------------
+#FOR LOOP RENAMING
+
+FILES=$(ls *.txt)
+NEW="MM"
+for FILE in $FILES
+do
+echo "renaming $FILE to mm-$FILES"
+mv $FILE $NEW-$FILE
+done
+---------------
+echo " print 1 to 10 "
+for (( int=1;i<=15;i++ ))
+do
+echo $i
+done
