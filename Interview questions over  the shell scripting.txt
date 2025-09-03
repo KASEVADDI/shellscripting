@@ -1,0 +1,43 @@
+﻿Interview questions over  the shell scripting.
+—---------------------------------------------------------------------
+Q) Create a directory named media inside the user's home directory (if it does not exist).
+Create a file inside that directory (filename should be passed as an argument to the script).
+Write some sample content into the file. Print a message confirming whether the file has been successfully created or not ?
+
+
+ANS: 
+#/bin/bash
+
+
+#file path (home/user)= $HOME
+
+
+DIR="$HOME/media"
+
+
+#CREATE A FILE INSIDE media
+
+
+FILE="$DIR/$1"
+
+
+#crate a direct if does not exit
+
+
+mkdir -p "$DIR"
+
+
+#creating file with data
+
+
+echo "this file contains data in example.txt." > "$FILE"
+
+
+#CHECK FILE HAS CREATED
+
+
+if [ -f "$FILE" ]; then
+        echo "yes, file has been created inside thispc dir"
+else
+        echo "no, no file created"
+fi
