@@ -1,0 +1,119 @@
+#!/bin/bash
+
+#echo hello world!
+
+#NAME="Muthyal"
+#echo "my name is ${NAME}"
+
+#read -p "Enter your name: " NAME
+#echo "my name is $NAME, nice to meet you!"
+
+#NUM1=31
+#NUM2=5
+#if [: "$NUM1" -gt "$NU2" :]
+#then
+# echo "$NUM1 is greater than $NUM2"
+#else
+# echo "$NUM1 is less than $NUM2"
+#fi
+
+#FILE="text.txt"
+#if [ -e "$FILE" ]
+#then
+# echo "$FILE is exit"
+#else
+# echo "$FILE does not exit"
+#fi
+
+#read -p "are you 25 or over? Y/N" ANSWER
+#case "$ANSWER" in
+#     [yY] | [yY][eE][sS])
+#echo "you can have a beer :)"
+#;;
+#     [nN] | [nN][oO])
+#echo "Sorry no drinking"
+#;;
+#*)
+#echo "please enter y/yes or n/no"
+#;;
+#esac
+
+#FOR LOOP
+#NAMES="muthyal"
+#for NAME in $NAMES
+#do
+#echo "hello all fuck you $NAMES"
+#done
+
+#FOR LOOP RENAMING
+
+#FILES=$(ls *.txt)
+#NEW="MM"
+#for FILE in $FILES
+#do
+#echo "renaming $FILE to mm-$FILES"
+#mv $FILE $NEW-$FILE
+#done
+
+#very imp topic practice more
+#echo " print 1 to 10 "
+#for (( int=1;i<=15;i++ ))
+#do
+#echo $i
+#done
+
+#caluculate line in a file imp topic pracitce more
+#LINE=1
+#while read -r CURRENT_LINE
+#do
+#echo "$LINE: $CURRENT_LINE"
+#((LINE++))
+#done < "./muthyal.txt"
+
+#how to crate a new file inside directory imp
+
+#mkdir hello
+#touch "hello/world.txt"
+#echo "hello world" >> "hello/world.txt"
+#echo "created hello/world.txt"
+---------------------------------------------------------------------
+#!/bin/bash
+
+#create folder
+mkdir muthyal
+cd muthyal
+#create a two files
+touch firestfile secondfile
+--------------
+##!/bin/bash
+echo "print the diskspace"
+df -h
+echo "print the memory"
+free -g
+echo "print the cpu"
+nproc
+-------------
+#!/bin/bash
+
+
+set -x #debug mode
+
+df -h
+
+free -g
+
+nproc
+--------------
+#!/bin/bash
+
+set -x # debug mode
+set -e #exit the script when there is on error
+set -o pepefail # pipe |
+
+ssssssss
+
+df -h
+
+free -g
+------------
+
