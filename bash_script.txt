@@ -1,0 +1,1167 @@
+https://www.techworld-with-siva.com/t/u/activeCourses    -- sivakumar namasthe devops: the complete k8s course.
+
+
+https://docs.yoctoproject.org/overview-manual/intro.html -- yoctoproject link for all topics
+https://buildroot.org/downloads/manual/manual.html#_about_buildroot -- buildroot link for all topics
+https://www.w3schools.com/python -- pyhton learning link
+---------------
+poky repository imp links
+https://github.com/yoctoproject/poky/tree/langdale/meta/recipes-graphics/mesa
+https://github.com/yoctoproject/poky/tree/kirkstone/meta/recipes-multimedia/gstreamer
+https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/Useful-bitbake-commands/ta-p/1128559
+https://git.openembedded.org/openembedded-core/tree/meta/recipes-multimedia/gstreamer?h=gatesgarth
+https://www.google.com/search?q=gstreamer+yocto+layer&rlz=1C1GCEA_enIN1058IN1058&oq=gstreamer+yocto+layer&aqs=chrome..69i57.4672j0j7&sourceid=chrome&ie=UTF-8
+https://git.yoctoproject.org/poky/plain/meta/recipes-multimedia/gstreamer/
+https://git.yoctoproject.org/poky/plain/meta/recipes-multimedia/gstreamer/
+https://github.com/yoctoproject/poky/tree/master/meta/recipes-multimedia/gstreamer
+https://github.com/yoctoproject/poky/blob/langdale/meta/recipes-multimedia/gstreamer/
+https://git.openembedded.org/openembedded-core/tree/meta/recipes-graphics/mesa
+https://github.com/yoctoproject/poky/blob/hardknott/meta/recipes-multimedia/gstreamer/gstreamer1.0
+---------------------------
+1.bob@7eacc0a7c838:~/workspace/buildroot/ZNB_imx6_169/build-image/images$ scp -r ZEISS_TIVATO700_1.6.2-65.img yocto@10.180.21.47:~
+ 
+"copy image from docker container to linux host"
+
+2.sudo docker cp /home/yocto/BR_2019_11_DL/. dfeb65bf2186:/home/bob/workspace/buildroot
+"linux host to docker_container"
+
+3.C:\Users\X6KMUTHY>scp -r C:\buildroot\BR_2019_11_DL yocto@10.180.21.47:~
+"copy from windows to linux host"
+
+4. if want copy anything from linux host to windows there is one way
+one is using winscp
+5. pull the files from docker container to linux
+sudo docker cp container_115:/home/bob/workspace/buildroot/ZNB_imx6_295/buildroot-2019.11/1.txt .
+------------------------------
+importent commands:
+
+check out to root user in ubuntu -- sudo -i
+check out to root user in linux -- su root
+--------------------------
+-eq (equal)
+-ne (not equal)
+-lt (less than)
+-le (less than or equal)
+-gt (greater than)
+-ge (greater than or equal)
+&& (logical AND)
+|| (logical OR)
+-----------------------
+#! /usr/bin/bash
+
+A="hello"
+B="${A} kasevaddi"
+C="${A} ${B} how r u"
+
+echo "$A"
+echo "$B"
+echo "$C"
+----------------
+#! /usr/bin/bash
+
+read -p "Enter you are age: " age
+
+if [ $age -ge 18 ]; then
+    if [ $age -ge 45 ]; then    
+        echo " you are an adult, eligible for full pension."
+    else
+        echo " you are an adult, not eligible for pension."
+    fi
+else
+    echo " you are not an adult need to wait till 18 years old."
+fi
+=================
+-eq (equal)
+-ne (not equal)
+-lt (less than)
+-le (less than or equal)
+-gt (greater than)
+-ge (greater than or equal)
+&& (logical AND)
+|| (logical OR)
+===========================
+#! /usr/bin/bash
+
+
+read -p "Enter you are age: " age
+
+if [ $age -lt 18 ]; then
+  echo "you are an not adult."
+elif [ $age -ge 18 ] && [ $age -lt 65 ]; then
+  echo "you are an adult."
+else
+  echo "you are a scenior citizen."
+fi
+======================================
+(scp kasevaddi@192.168.150.130:~/zeiss-ushuaia-flash-image-amd-ryzen-gullfoss-rev01-20230829134423.rootfs.wic D:\CZM)   (D:\CZM - this usb/pendrive path which i insert in laptop) 
+=====
+#! /usr/bin/bash
+
+
+echo "Enter patient name: "
+read name
+
+if [ "$name" == a ]; then
+    echo "hello $name,you are health is good, you can dispatch now."
+elif [ "$name" == b ]; then
+    echo "hi $name your condition too bad, you have to stay few days here."
+else
+    echo "you have to wait for few min to check your helth."
+fi
+---------------
+#! /usr/bin/bash
+
+
+for i in {1..11}
+do
+    echo $i
+done
+---------------
+this is in python
+for i in range(1,11):
+   print(i)
+----------
+#! /usr/bin/bash
+
+echo "enter a number: "
+read number
+
+if ((number % 2 == 0)); then
+   echo "enter number is even"
+else
+   echo "enter number is odd"
+fi
+------------------------------
+#! /usr/bin/bash
+#below written all data types 
+
+#this is a string variable
+name="kase"
+echo "string: $name"
+
+#this is a integer variable
+
+age="30"
+echo "integer: $age"
+
+#this is a floating point variable
+
+height="5.9"
+echo "floating: $height"
+
+#this is a boolen variable
+
+is_student=1
+
+if [ $is_student -eq 1 ]; then
+    echo "is a student:yes" && echo "this is boolen"
+else
+    echo "is a student:no"
+
+fi
+
+#Arrays
+fruits=("apple" "banana" "cherry")
+echo "FRUITS: ${fruits[*]}"
+-------------------------------------------
+#! /usr/bin/bash
+
+echo "enter user name:"
+read name
+
+if [ "$name" == "kasevaddi" ]; then
+    echo "yes you are a kasevaddi"
+else
+    echo "you are not a kasevaddi/fake"
+fi
+------------------------
+#! /usr/bin/bash
+
+number=26
+
+if [ $number -gt 25 ]; then
+    echo "the then number is positive "
+elif [ $number -lt 25 ]; then
+    echo "the number is negitive"
+else
+    echo "the number is 0"
+fi
+--------------------------
+#! /usr/bin/bash
+
+echo "enter user number:"
+read number
+
+if [ $number -gt 25 ]; then
+    echo "the then number is positive "
+elif [ $number -lt 25 ]; then
+    echo "the number is negitive"
+else
+    echo "the number is 0"
+fi
+--------------------------
+#! /usr/bin/bash
+
+echo "enter your number:"
+read number
+citizen="yes"
+
+if [ $number -gt 18 ]  &&  [ "$citizen" == "yes" ]; then
+    echo "you are eligible to vote"
+else
+    echo "you are not elible to vote"
+fi
+-------------------------------
+#! /usr/bin/bash
+
+day="saturday"
+
+case "$day" in
+     "monday"|"tuesday"|"wednesday"|"thursday"|"friday")
+             echo "its a weekday:"
+             ;;
+      "saturday"|"sunday")
+              echo "its weekend"
+             ;;
+      *)
+              echo "invaild day"
+             ;;
+esac
+---------------------------
+#! /usr/bin/bash
+echo "enter the day:"
+day="saturday"
+
+case "$day" in
+     "monday"|"tuesday"|"wednesday"|"thursday"|"friday")
+             echo "its a weekday:"
+             ;;
+      "saturday"|"sunday")
+              echo "its weekend"
+             ;;
+      *)
+              echo "invaild day"
+             ;;
+esac
+----------------------------------
+#! /usr/bin/bash 
+
+echo "1"
+
+#define variables
+
+name="kasevaddi"
+age=30
+citizen="indian"
+
+echo "2"
+
+#define functions using variables
+
+greet() {
+greeting="hello"
+echo "$greeting, $1! you are $2 years old and you are $3"
+}
+#call the function defining variables
+
+greet "$name" "$age" "$citizen"
+-------------------------------------
+#! /usr/bin/bash 
+num1=30
+num2=50
+
+sum=$((num1 + num2))
+difference=$((num1 - num2))
+product=$((num1 * num2))
+quotient=$((num1 / num2))
+
+echo "add: $sum"
+echo "sub: $difference"
+echo "multi: $product"
+echo "divison: $quotient"
+---------------------------
+#! /usr/bin/bash 
+
+greet() {
+  add_numbers=$(( $1 + $2 ))
+  echo "the sum value of $1 and $2 is: $add_numbers"
+}
+
+#define variables
+greet 10 20
+------------------
+#! /usr/bin/bash 
+echo "enter your number: "
+read number1
+read number2
+
+greet() {
+  number=$(( $1 + $2 ))
+  echo "the sum value of $1 and $2 is: $number"
+}i
+
+#define variables
+greet $number1 $number2
+---------------------------
+! /usr/bin/bash 
+echo "enter user name: "
+read user_name
+
+greet() {
+  echo "hello! $1"
+}
+
+#define variables
+greet $user_name
+---------------------------
+#! /usr/bin/bash 
+
+# Prompt the user for a number
+echo "enter usernumber: "
+read user_number
+
+#define a function that prints 1 to n
+
+greet() {
+  local n=$1
+  for ((i = 1; i <= n; i++)); do
+  echo $i
+done
+}
+# Call the function to print numbers from 1 to the user's number
+greet $user_number
+----------------------
+! /usr/bin/bash
+
+#echo "enter your first name1: "
+#read name1
+
+#echo "enter your second name2: "
+#read name2
+
+#echo Hello!  $name1 $name2
+
+
+echo "what is your first name?"
+read FIRST_NAME
+
+echo "what is your second name?"
+read SECOND_NAME
+
+echo Hello! $FIRST_NAME $SECOND_NAME
+--------------------------------------
+to copy the out put into a file
+echo hello! kasevaddi > hello.txt
+----------------------------------
+to list the files or directories using | grep filename/foldername.
+ls -l /usr/bin | grep bash
+---------------------------------
+multiple data/arguments we can store in single file without loss the data
+echo Hello!kasevaddi >> hello.txt
+echo Good day to you! >> hello.txt
+---------------------------------------
+word count inside the hello.txt file
+wc -w  < hello.txt
+----------------------
+true or false
+if true 0
+if not true 1
+#! /usr/bin/bash
+
+#[ hello = hello ]
+#echo $?
+#----------
+#[ hello = bye ]
+#echo $?
+#----------------
+#[ 1 -eq 1 ]
+#echo $?
+#----------
+[ 1 = 1 ]
+echo $?
+===============
+if/elif/else conditions/statements
+
+#! /usr/bin/bash
+
+if [ "${1,,}" = "kasevaddi" ]; then
+      echo "oh! you are the boss here. welcome"
+elif [ "${1,,}" = "help" ]; then
+      echo " enter your username"
+else
+      echo "hello, i dont know who u are, ypu are not the bos
+#run command like below get output
+./script.sh kasevaddi
+./script.sh help
+./script.sh somename
+-------------------------------------
+case statements/conditions
+#! /usr/bin/bash
+
+case "${1,,}" in
+        kasevaddi | administrator)
+                  echo "hello! you are the boss,welcome"
+                  ;;
+        help)
+                  echo " you are the not user, enter your name"
+                  ;;
+        *)
+                  echo "you are not the boss here"
+esac
+#run command like below get output
+./script.sh kasevaddi
+./script.sh help
+./script.sh somename
+----------------------------
+ARRAY
+#! /usr/bin/bash
+
+MY_FIRST_LIST=(one two three four five)
+echo $MY_FIRST_LIST
+echo ${MY_FIRST_LIST[@]}
+echo ${MY_FIRST_LIST[0]}
+------------------------
+functions in bash script or exit codes
+#! /usr/bin/bash
+
+showname() {
+	echo hello $1
+	if [ "${1,,}" = "kasevaddi" ]; then
+		return 0
+	else
+		return 1
+
+	fi
+}
+showname $1
+if [ $? = 1 ]; then
+	echo "someone unkown call the statement"
+fi
+----------------------
+awk
+echo "just get this word: hello" | awk '{print $5}'
+---------------------------
+#! /usr/bin/bash
+
+echo "enter your username."
+read user_name
+
+if [ $user_name = kasevaddi ] || [ $user_name = help ]; then
+
+        echo "$user_name, hi! your the boss.welcome."
+else
+        echo "$username, you are not the boss."
+oifi
+------------------------------------
+#! /usr/bin/bash
+#promt the user for their username
+
+echo "enter your username."
+read user_name
+
+#promt the passwd for the user
+
+echo "enter user passwd. "
+read passwd
+
+if [ $user_name = kasevaddi ] && [ $passwd = Muthyal ]; then
+
+        echo "permission granted for $user_name."
+else
+        echo "permission declined for $username."
+fi
+---------------------------------------
+#/usr/bin/bash
+
+#promt the user to read
+
+echo "enter your name."
+read user_name
+
+#define choice options
+
+echo "hello, $user_name's choose options"
+echo "1. viewr's settings"
+echo "2. entered into settings"
+echo "3. logut from settings"
+read choice
+
+#prompt user and choice
+
+case $choice in
+  1)
+    echo "viewer settings of $user_name's..."
+    ;;
+  2)
+    echo "entered into settings of $user_name's..."
+    ;;
+  3)
+    echo "logout from $user_name..."
+    ;;
+  *)
+    echo "invalid option."
+esac
+-------------------------
+#/usr/bin/bash
+
+echo "enter your name: "
+read user_name
+
+echo "enter passwd: "
+read passwd
+
+if [ $user_name = kasevaddi ] && [ $passwd = Muthyal@222 ]; then
+  echo "hi,  you are able to login into $user_name's websit"
+else
+  echo " invalid user_name, pls enter correclty"
+fi
+--------------------------
+#/usr/bin/bash
+
+echo "enter your name: "
+read user_name
+
+echo "enter number: "
+read number
+
+if [ $number -le 50 ]; then
+  echo "hi,$user_name! your score is lesthan equl to $number: so you have to earn more points to win the prize"
+elif [ $number == 100 ]; then
+  echo "hi,$user_name! your score is grathe then equl to $number: so you have won the prize"
+else
+   echo " invalid number so not eligible"
+fi
+-----------------------------
+#! /usr/bin/bash
+c_g="\e[1;32m"
+c_r="\e[1;31m"
+c_d="\e[0m"
+
+
+echo -e "${c_g}This is green text${c_d}"
+echo -e "${c_r}This is red text${c_d}"
+
+echo -e "${c_g}Hello, world!${c_d}"
+-----------------------------------
+
+#!/bin/bash
+
+c_g="\e[1;32m"
+c_r="\e[1;31m"
+c_d="\e[0m"
+
+Hi_hello () {
+    echo -e "${c_g}This is green text${c_d}"
+    echo -e "${c_r}This is red text${c_d}"
+    echo -e "${c_g}Hello, world!${c_d}"
+    while true; do
+        sleep 1
+    done
+}
+
+# Call the function to execute the desired actions
+Hi_hello
+--------------------------------------
+#!/bin/bash
+
+c_g="\e[1;32m"
+c_r="\e[1;31m"
+c_d="\e[0m"
+
+
+kasevaddi_zeiss () {
+	number="enter your number"
+	read number
+
+if [ $number -lt 100 ]; then
+  echo -e "${c_g} $number is less than 100 ${c_d}"
+elif [ $number -gt 1000 ]; then
+  echo -e "${c_g} $number is grather than 1000 ${c_d}"
+else
+    echo -e "enter number is wrong"
+fi
+
+}
+kasevaddi_zeiss
+----------------------------------
+#!/bin/bash
+
+
+mkdir /home/kasevaddi/sampledir
+cd sampledir
+touch samplefile1
+echo "hii kasevaddi how r u" > samplefile1
+echo "i am good what about you" >> samplefile1
+echo " i am great" >> samplefile1
+
+vim samplefile1 -c "wq!"
+
+mv  /home/kasevaddi/python.py /home/kasevaddi
+------------------------
+
+#!/bin/sh
+if $(grep -q are /home/kasevaddi/file1); then
+    echo "yes, are word is"
+    exit 0
+fi
+
+echo "script excuted succ"
+exit 1
+--------------------------
+#!/bin/sh
+
+/bin/touch /home/kasevaddi/tmp/file1
+--------------------------------------
+#!/bin/bash
+HOME="/home/kasevaddi/file1"
+
+#HOME=`cat /home/kasevaddi/file1 | grep hi how are you | uniq`
+HOME=$(grep "hi how are you" $HOME | uniq)
+
+if [ -n "$HOME" ]; then
+        echo "CongatecBoard"
+        exit 0
+fi
+------------------------
+#!/bin/bash
+
+
+FILE_PATH="$1"
+
+# Search for the string "hi how are you" in the specified file and store the result in RESULT
+RESULT=$(grep "hi how are you" "$FILE_PATH" | uniq)
+
+if [ -n "$RESULT" ]; then
+    echo "CongatecBoard"
+    exit 0
+fi
+-----------------------------------
+
+#this is sample bash script
+
+echo "hello! world"
+
+#variable
+
+echo "enter your name: "
+read name
+echo $name
+
+#conditions
+
+if [ $name == "kasevaddi" ]; then
+  echo "yes, you are the admin"
+else
+  echo "enter correct admin user"
+fi
+
+#loop
+
+for i in {1..10}; do
+  echo $i
+
+done
+
+#function
+
+greet () {
+  echo "greetings! $i"
+}
+
+greet "Alice"
+-------------------------------
+#!/bin/bash
+
+# Prompt the user for input
+read -p "Enter a number: " userInput
+
+# Check if the input is a valid positive integer
+if [[ $userInput =~ ^[1-9][0-9]*$ ]]; then
+    # Use a for loop to print numbers from 1 to the entered value
+    for ((i = 1; i <= userInput; i++)); do
+        echo $i
+    done
+else
+    echo "Invalid input. Please enter a positive integer."
+fi
+----------------------------
+build_targets=("target1" "target2" "target3")
+
+for target in "${build_targets[@]}"; do
+    echo "Building ${target}..."
+    # Additional build commands for each target
+done
+---------------------------------
+#/usr/bin/bash
+
+echo "enter your name: "
+read user_name
+
+echo "enter number: "
+read number
+
+if [ $number -le 50 ]; then
+  echo "hi,$user_name! your score is lesthan equl to $number: so you have to earn more points to win the prize"
+elif [ $number == 100 ]; then
+  echo "hi,$user_name! your score is grathe then equl to $number: so you have won the prize"
+else
+   echo " invalid number so not eligible"
+fi
+---------------------------------
+#! /bin/bash
+
+echo "enter 2 numbers: "
+read num1
+read num2
+
+sum=$((num1 + num2))
+echo "Sum is: $sum"
+
+difference=$((num1 - num2))
+echo "Diff is: $difference"
+
+product=$((num1 * num2))
+echo "Product is: $product"
+
+quotient=$((num1 / num2))
+echo "Product is: $quotient"
+
+-------------------------
+#! /bin/bash
+
+
+echo "Enter file name: "
+read filename
+
+if [ -e "$filename" ]; then
+    echo "FILE: $filename exists"
+
+    if [ -f "$filename" ]; then
+        echo "FILE: $filename is a rugular file"
+    elif [ -d "$filename" ]; then
+        echo "its a directory"
+    fi
+
+    echo "file size $(du -h "$filename" | cut -f1)"
+else
+    echo "File $filename does not exist"
+fi
+-------------------
+#!/bin/bash
+
+# Script to check if a number is even or odd
+
+echo "Enter a number:"
+read num
+
+if ((num % 2 == 0)); then
+    echo "The number $num is even."
+else
+    echo "The number $num is odd."
+fi
+------
+#/usr/bin/bash
+
+#!/bin/bash
+
+# Check if the number of command-line arguments is correct
+if [ "$#" -ne 2 ]; then
+    echo "ERROR: Illegal number of parameters."
+    echo "Usage: $0 <argument1> <argument2>"
+    exit 1
+fi
+
+# Assign command-line arguments to variables
+arg1="$1"
+arg2="$2"
+
+# Display the arguments
+echo "Arguments1: $arg1"
+echo "Arguments2: $arg2"
+
+# Add your script logic here using $arg1 and $arg2
+
+# End of the script
+
+------------------------------------
+apply the patches in buildroot:
+
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cd ..
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  mosquitto-2.0.14  mosquitto-2.0.14.tar.gz
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14$ cd mosquitto-2.0.14/
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake           CONTRIBUTING.md  installer             Makefile        pskfile.example        security
+about.html                                         CMakeLists.txt  deps             lib                   man             pwfile.example         service
+aclfile.example                                    config.h        edl-v10          libmosquitto.pc.in    misc            README-compiling.md    snap
+apps                                               config.mk       epl-v20          libmosquittopp.pc.in  mosquitto.conf  README-letsencrypt.md  src
+ChangeLog.txt                                      config.mk.orig  examples         LICENSE.txt           NOTICE.md       README.md              test
+client                                             config.mk.rej   include          logo                  plugins         README-windows.txt
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -p1 -R < 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patching file config.mk
+Hunk #1 succeeded at 39 with fuzz 2 (offset 16 lines).
+Hunk #2 FAILED at 202.
+1 out of 2 hunks FAILED -- saving rejects to file config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake           CONTRIBUTING.md  installer             Makefile        pskfile.example        security
+about.html                                         CMakeLists.txt  deps             lib                   man             pwfile.example         service
+aclfile.example                                    config.h        edl-v10          libmosquitto.pc.in    misc            README-compiling.md    snap
+apps                                               config.mk       epl-v20          libmosquittopp.pc.in  mosquitto.conf  README-letsencrypt.md  src
+ChangeLog.txt                                      config.mk.orig  examples         LICENSE.txt           NOTICE.md       README.md              test
+client                                             config.mk.rej   include          logo                  plugins         README-windows.txt
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ rm rconfig.mk.orig config.mk.rej
+rm: cannot remove 'rconfig.mk.orig': No such file or directory
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ rm config.mk.orig config.mk.rej
+rm: cannot remove 'config.mk.rej': No such file or directory
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake            edl-v10    libmosquitto.pc.in    misc             README-compiling.md    snap
+about.html                                         CMakeLists.txt   epl-v20    libmosquittopp.pc.in  mosquitto.conf   README-letsencrypt.md  src
+aclfile.example                                    config.h         examples   LICENSE.txt           NOTICE.md        README.md              test
+apps                                               config.mk        include    logo                  plugins          README-windows.txt
+ChangeLog.txt                                      CONTRIBUTING.md  installer  Makefile              pskfile.example  security
+client                                             deps             lib        man                   pwfile.example   service
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -p1< 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patching file config.mk
+Hunk #1 succeeded at 39 with fuzz 2 (offset 16 lines).
+Hunk #2 FAILED at 206.
+1 out of 2 hunks FAILED -- saving rejects to file config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ vi config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ vi config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ vi config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ vi config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -p -R < 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patch: **** strip count -R is not a number
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -1p -R < 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patch: invalid option -- '1'
+patch: Try 'patch --help' for more information.
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -p1 -R < 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patching file config.mk
+Hunk #1 succeeded at 39 with fuzz 2 (offset 16 lines).
+Hunk #2 FAILED at 202.
+1 out of 2 hunks FAILED -- saving rejects to file config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ rm config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake            deps       lib                   man              pwfile.example         service
+about.html                                         CMakeLists.txt   edl-v10    libmosquitto.pc.in    misc             README-compiling.md    snap
+aclfile.example                                    config.h         epl-v20    libmosquittopp.pc.in  mosquitto.conf   README-letsencrypt.md  src
+apps                                               config.mk        examples   LICENSE.txt           NOTICE.md        README.md              test
+ChangeLog.txt                                      config.mk.orig   include    logo                  plugins          README-windows.txt
+client                                             CONTRIBUTING.md  installer  Makefile              pskfile.example  security
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ rm  config.mk.orig
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake            edl-v10    libmosquitto.pc.in    misc             README-compiling.md    snap
+about.html                                         CMakeLists.txt   epl-v20    libmosquittopp.pc.in  mosquitto.conf   README-letsencrypt.md  src
+aclfile.example                                    config.h         examples   LICENSE.txt           NOTICE.md        README.md              test
+apps                                               config.mk        include    logo                  plugins          README-windows.txt
+ChangeLog.txt                                      CONTRIBUTING.md  installer  Makefile              pskfile.example  security
+client                                             deps             lib        man                   pwfile.example   service
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cat0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+cat0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch: command not found
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cat 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+From 9a1ea149d3451d4edf32c5f0f0d1b4fecfbff4a2 Mon Sep 17 00:00:00 2001
+From: Fabrice Fontaine <fontaine.fabrice@gmail.com>
+Date: Tue, 6 Aug 2019 22:11:57 +0200
+Subject: [PATCH] config.mk: add WITH_TLS_STATIC_LIB_DEPS
+
+Add WITH_TLS_STATIC_LIB_DEPS to allow the user to give openssl static
+libraries dependencies such as -lz or -latomic
+
+Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
+[Upstream status: https://github.com/eclipse/mosquitto/pull/1371]
+---
+ config.mk | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/config.mk b/config.mk
+index 6c23bef..c9e2daf 100644
+--- a/config.mk
++++ b/config.mk
+@@ -23,6 +23,10 @@
+ # password authentication at all.
+ WITH_TLS:=no
+
++# Use this variable to give openssl static libraries dependencies (such as -lz
++# or -latomic) that can be retrieved for example by pkg-config
++WITH_TLS_STATIC_LIB_DEPS:=
++
+ # Comment out to disable TLS/PSK support in the broker and client. Requires
+ # WITH_TLS=no.
+ # This must be disabled if using openssl < 1.0.
+@@ -202,7 +206,7 @@ ifeq ($(WITH_TLS),yes)
+        LIB_CPPFLAGS:=$(LIB_CPPFLAGS) -DWITH_TLS
+        PASSWD_LDADD:=$(PASSWD_LDADD) -lcrypto
+        CLIENT_CPPFLAGS:=$(CLIENT_CPPFLAGS) -DWITH_TLS
+-       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto
++        STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto $(WITH_TLS_STATIC_LIB_DEPS)
+
+        ifeq ($(WITH_TLS_PSK),yes)
+                BROKER_CPPFLAGS:=$(BROKER_CPPFLAGS) -DWITH_TLS_PSK
+--
+2.20.1
+
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ :q
+:q: command not found
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch  cmake            edl-v10    libmosquitto.pc.in    misc             README-compiling.md    snap
+about.html                                         CMakeLists.txt   epl-v20    libmosquittopp.pc.in  mosquitto.conf   README-letsencrypt.md  src
+aclfile.example                                    config.h         examples   LICENSE.txt           NOTICE.md        README.md              test
+apps                                               config.mk        include    logo                  plugins          README-windows.txt
+ChangeLog.txt                                      CONTRIBUTING.md  installer  Makefile              pskfile.example  security
+client                                             deps             lib        man                   pwfile.example   service
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ mkdir a
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ mkdir b
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cp config.mk a
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cp config.mk b
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cd conf^C
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cd b/
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/b$ patch -p1 < ../0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+patching file config.mk
+Hunk #1 succeeded at 39 with fuzz 2 (offset 16 lines).
+Hunk #2 FAILED at 206.
+1 out of 2 hunks FAILED -- saving rejects to file config.mk.rej
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/b$ vi config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/b$ cd ..
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ diff -Naur a/config.mk b/config.mk
+--- a/config.mk 2024-02-06 14:25:43.103636056 +0530
++++ b/config.mk 2024-02-06 14:26:42.845070798 +0530
+@@ -39,6 +39,10 @@
+ # or -latomic) that can be retrieved for example by pkg-config
+ WITH_TLS_STATIC_LIB_DEPS:=
+
++# Use this variable to give openssl static libraries dependencies (such as -lz
++# or -latomic) that can be retrieved for example by pkg-config
++WITH_TLS_STATIC_LIB_DEPS:=
++
+ # Comment out to disable TLS/PSK support in the broker and client. Requires
+ # WITH_TLS=yes.
+ # This must be disabled if using openssl < 1.0.
+@@ -260,7 +264,7 @@
+        LIB_CPPFLAGS:=$(LIB_CPPFLAGS) -DWITH_TLS
+        LIB_LIBADD:=$(LIB_LIBADD) -lssl -lcrypto
+        PASSWD_LDADD:=$(PASSWD_LDADD) -lcrypto
+-       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto
++       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto $(WITH_TLS_STATIC_LIB_DEPS)
+
+        ifeq ($(WITH_TLS_PSK),yes)
+                BROKER_CPPFLAGS:=$(BROKER_CPPFLAGS) -DWITH_TLS_PSK
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ diff -Naur a/config.mk b/config.mk > 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch  ChangeLog.txt    deps       libmosquitto.pc.in    mosquitto.conf         README.md
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch      client           edl-v10    libmosquittopp.pc.in  NOTICE.md              README-windows.txt
+a                                                      cmake            epl-v20    LICENSE.txt           plugins                security
+about.html                                             CMakeLists.txt   examples   logo                  pskfile.example        service
+aclfile.example                                        config.h         include    Makefile              pwfile.example         snap
+apps                                                   config.mk        installer  man                   README-compiling.md    src
+b                                                      CONTRIBUTING.md  lib        misc                  README-letsencrypt.md  test
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ patch -p1 < 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch
+patching file config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cat 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch
+From 9a1ea149d3451d4edf32c5f0f0d1b4fecfbff4a2 Mon Sep 17 00:00:00 2001
+From: Fabrice Fontaine <fontaine.fabrice@gmail.com>
+Date: Tue, 6 Aug 2019 22:11:57 +0200
+Subject: [PATCH] config.mk: add WITH_TLS_STATIC_LIB_DEPS
+
+Add WITH_TLS_STATIC_LIB_DEPS to allow the user to give openssl static
+libraries dependencies such as -lz or -latomic
+
+Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
+[Upstream status: https://github.com/eclipse/mosquitto/pull/1371]
+---
+ config.mk | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/config.mk b/config.mk
+index 6c23bef..c9e2daf 100644
+--- a/config.mk
++++ b/config.mk
+@@ -23,6 +23,10 @@
+ # password authentication at all.
+ WITH_TLS:=no
+
++# Use this variable to give openssl static libraries dependencies (such as -lz
++# or -latomic) that can be retrieved for example by pkg-config
++WITH_TLS_STATIC_LIB_DEPS:=
++
+ # Comment out to disable TLS/PSK support in the broker and client. Requires
+ # WITH_TLS=no.
+ # This must be disabled if using openssl < 1.0.
+@@ -202,7 +206,7 @@ ifeq ($(WITH_TLS),yes)
+        LIB_CPPFLAGS:=$(LIB_CPPFLAGS) -DWITH_TLS
+        PASSWD_LDADD:=$(PASSWD_LDADD) -lcrypto
+        CLIENT_CPPFLAGS:=$(CLIENT_CPPFLAGS) -DWITH_TLS
+-       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto
++        STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto $(WITH_TLS_STATIC_LIB_DEPS)
+
+        ifeq ($(WITH_TLS_PSK),yes)
+                BROKER_CPPFLAGS:=$(BROKER_CPPFLAGS) -DWITH_TLS_PSK
+--
+2.20.1
+
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ ls
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch  ChangeLog.txt    deps       libmosquitto.pc.in    mosquitto.conf         README.md
+0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS.patch      client           edl-v10    libmosquittopp.pc.in  NOTICE.md              README-windows.txt
+a                                                      cmake            epl-v20    LICENSE.txt           plugins                security
+about.html                                             CMakeLists.txt   examples   logo                  pskfile.example        service
+aclfile.example                                        config.h         include    Makefile              pwfile.example         snap
+apps                                                   config.mk        installer  man                   README-compiling.md    src
+b                                                      CONTRIBUTING.md  lib        misc                  README-letsencrypt.md  test
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cd a
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/a$ ls
+config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/a$ vi config.mk
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/a$
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/a$ cd ..
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cd b/
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14/b$ ls
+config.mk  config.mk.orig  config.mk.rej
+
+
+/home/bob/workspace/buildroot/ZNB_imx6_224/buildroot-2019.11/package/mosquitto/0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch
+/home/yocto/mosq_tar/mosquitto-2.0.14/0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch
+/home/bob/workspace/buildroot/ZNB_imx6_224/buildroot-2019.11/package/mosquitto/0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS_file.patch 
+
+
+================
+yocto@yocto-vm:~/mosquitto2/mosquitto-2.0.14/mosquitto-2.0.14$ cat 0001-config.mk-add-WITH_TLS_STATIC_LIB_DEPS-new.patch
+--- a/config.mk 2024-02-06 14:25:43.103636056 +0530
++++ b/config.mk 2024-02-06 14:26:42.845070798 +0530
+@@ -39,6 +39,10 @@
+ # or -latomic) that can be retrieved for example by pkg-config
+ WITH_TLS_STATIC_LIB_DEPS:=
+
++# Use this variable to give openssl static libraries dependencies (such as -lz
++# or -latomic) that can be retrieved for example by pkg-config
++WITH_TLS_STATIC_LIB_DEPS:=
++
+ # Comment out to disable TLS/PSK support in the broker and client. Requires
+ # WITH_TLS=yes.
+ # This must be disabled if using openssl < 1.0.
+@@ -260,7 +264,7 @@
+        LIB_CPPFLAGS:=$(LIB_CPPFLAGS) -DWITH_TLS
+        LIB_LIBADD:=$(LIB_LIBADD) -lssl -lcrypto
+        PASSWD_LDADD:=$(PASSWD_LDADD) -lcrypto
+-       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto
++       STATIC_LIB_DEPS:=$(STATIC_LIB_DEPS) -lssl -lcrypto $(WITH_TLS_STATIC_LIB_DEPS)
+
+        ifeq ($(WITH_TLS_PSK),yes):q!
+                BROKER_CPPFLAGS:=$(BROKER_CPPFLAGS) -DWITH_TLS_PSK
+===========================up to here apply the patches in buildroot real time work========================
+
+steps for installing the package in buildroot
+ex package : sqlite
+sqlite 3450100 Downloading
+sqlite 3450100 Extracting
+sqlite 3450100 Patching
+sqlite 3450100 Updating config.sub and config.guess
+sqlite 3450100 Patching libtool
+sqlite 3450100 Collecting legal info
+sqlite 3450100 Configuring
+sqlite 3450100 Building
+sqlite 3450100 Installing to staging directory
+sqlite 3450100 Fixing libtool files
+sqlite 3450100 Installing to target
+  Finalizing target directory
+==========================================
+docker exec \
+--env BR_SVN_BRANCH=%env.ZNB_SVN_BRANCH% \
+--env BR_SVN_REVISION=%env.ZNB_SVN_REVISION% \
+--env PROJECT_BUILD_NUMBER=%env.PROJECT_BUILD_NUMBER% \
+--env PROJECT_LANGUAGES_version=%env.PROJECT_LANGUAGES_version% \
+--env PROJECT_MILESTONE=%env.PROJECT_MILESTONE% \
+--env PROJECT_ONLINE_HELP_version=%env.PROJECT_ONLINE_HELP_version% \
+--env PROJECT_PRODUCT_NAME=%env.PROJECT_PRODUCT_NAME% \
+--env PROJECT_SVN_PATH=%czmsvn.subUri% \
+--env PROJECT_SVN_REVISION=%env.PROJECT_SVN_REVISION% \
+--env ZEISS_PRODUCT_NAME=%env.ZEISS_PRODUCT_NAME% \
+--env ZEISS_SVN_USERNAME=Admin \
+--env ZEISS_SVN_PASSWORD=Welcome@123 \
+%build.container% /home/bob/workspace/Manchester_Manifest/build_manchester_1-6-2.sh build-image || exit 1
+ ----
+export BR_SVN_BRANCH=branches/Manchester-1.6.2/Hardware/ZNB_imx6
+export BR_SVN_REVISION=315
+export PROJECT_BUILD_NUMBER=container_1.6.2_incremental
+export PROJECT_LANGUAGES_version=1.6.2.71
+export PROJECT_MILESTONE=1.6.2
+export PROJECT_ONLINE_HELP_version=1.6.2.28
+export PROJECT_PRODUCT_NAME=TIVATO700 
+export PROJECT_SVN_PATH=branches/Manchester-1.6.2/MED_Device_Platform/Manchester
+export PROJECT_SVN_REVISION=315
+export ZEISS_PRODUCT_NAME=ZEISS_TIVATO700 
+export ZEISS_SVN_USERNAME=X6KMUTHY 
+export ZEISS_SVN_PASSWORD=Welcome@123
+==============================================
+package/component download process:
+------------------------------------
+
+# define sub-target stamps
+$(2)_TARGET_INSTALL_TARGET =    $$($(2)_DIR)/.stamp_target_installed
+$(2)_TARGET_INSTALL_STAGING =   $$($(2)_DIR)/.stamp_staging_installed
+$(2)_TARGET_INSTALL_IMAGES =    $$($(2)_DIR)/.stamp_images_installed
+$(2)_TARGET_INSTALL_HOST =      $$($(2)_DIR)/.stamp_host_installed
+$(2)_TARGET_BUILD =             $$($(2)_DIR)/.stamp_built
+$(2)_TARGET_CONFIGURE =         $$($(2)_DIR)/.stamp_configured
+$(2)_TARGET_RSYNC =             $$($(2)_DIR)/.stamp_rsynced
+$(2)_TARGET_PATCH =             $$($(2)_DIR)/.stamp_patched
+$(2)_TARGET_EXTRACT =           $$($(2)_DIR)/.stamp_extracted
+$(2)_TARGET_SOURCE =            $$($(2)_DIR)/.stamp_downloaded
+$(2)_TARGET_ACTUAL_SOURCE =     $$($(2)_DIR)/.stamp_actual_downloaded
+$(2)_TARGET_DIRCLEAN =          $$($(2)_DIR)/.stamp_dircleaned
+----------------------------------------
+below links for download the components/packages in buildroot
+
+https://sources.buildroot.net/busybox/
+https://github.com/buildroot/buildroot/blob/2024.02.2/package/libzlib/libzlib.mk -- buildroot official link from here we can download the components for 
+upgrade the versions. like if we want to upgrade or downgrade the versions from above link we can get git.
+------------------------------------
+
+below mentioned list of the Components in buildroot
+------------------
+Jetty: Java based HTTP/1.x, HTTP/2, Servlet, WebSocket Server
+Qt5
+OPENJDK
+Apache Tomcat (is it apache?)
+Spring Framework
+jackson-databind
+GNU Binutils (is it binutils?) 
+SQLite
+OpenSSL
+GNU C Library
+libsndfile
+busybox
+libexpat
+Apache HttpClient
+libxml2
+Apache Log4j
+GStreamer
+Apache Xerces2 J
+sudo
+GLib (is it glibc?)
+httpcomponents-core
+hostapd
+wpa_supplicant - IEEE 802.1X, WPA, WPA2, RSN, IEEE 802.11i
+Axis (Java)
+libjpeg-turbo
+Boa
+Linux-Pam
+Castor
+Apache Commons BeanUtils
+Apache Commons Collections
+PCRE2
+Apache Xalan (Java)
+Axis2 (Java)
+libzlib
+google-guava
+libjpeg
+JDOM
+Apache Commons Codec
+Apache Commons IO
+e2fsprogs
+libpng
+PCRE
+Speex
+pulseaudio
+
+
+ 
+
+
